@@ -1,83 +1,180 @@
-html{
-    box-sizing: border-box;
-    height: 100%;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
+* {
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
 }
 
-body{
+html,
+body {
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+section {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    width: 100%;
+}
+
+.form-box {
+    position: relative;
+    width: 650px;
+    height: 800px; /* Adapt to content height */
+    background: rgba(199, 215, 211, 0.8); /* Slightly transparent gray background */
+    backdrop-filter: blur(15px); /* Apply blur effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    padding: 20px; /* Add padding to avoid content touching the edges */
+}
+
+h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: left;
+}
+
+.inputbox {
+    position: relative;
+    margin: 15px 0; /* Adjusted margin for better spacing */
+    width: 100%; /* Full width of the form box */
+    border-bottom: 2px solid #fff;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    top: -5px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.forget {
+    margin: 15px 0; /* Adjusted margin for better spacing */
+    font-size: 0.9em;
+    color: #fff;
     display: flex;
-    font-family: 'sansation', sans-serif;
-    font-display: swap;
-    
-    justify-content: right;
-    width: 100%; 
-        height: 100%; 
+    justify-content: space-between;
+    width: 100%; /* Full width of the form box */
 }
 
-.logo{
-    text-indent: -999999px;
-    background: url('example.png');
-    height: 563px;
-    width: 563px;
-    margin-left: 55px;
+.forget label input {
+    margin-right: 3px;
 }
 
-.wrapper{
-    backdrop-filter: blur(5.5px);
-    color:black;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    background: #c7d7d3;
-    flex-basis: 730px;
-    width: 100%; 
-        height: 100%; 
-    padding: 20px 35px;
+.forget label a {
+    color: #fff;
+    text-decoration: none;
 }
 
-.score-button-row{
-    display: flex;
-  justify-content: center;
-  border: 0px;
-  height: 58%;
-  position: relative;
-  top: -8rem;
-  padding: 15px;
-}
-.score-button-log{
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    background: #8FCFAA;
-    border: 0px solid rgba(35,35,35,0.1);
-    border-radius: 300px;
-    box-shadow: 0 2px 5px;
-    color: black;
-    flex-basis: 323px;
-    font-family: inherit;
-    font-size: 40px;
-    height: 86px;
+.forget label a:hover {
+    text-decoration: underline;
 }
 
-.score-button-sign{
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    background: #4C6B61;
-    border: 0px solid rgba(35,35,35,0.1);
-    border-radius: 300px;
-    box-shadow: 0 2px 5px black;
-    color: white;
-flex-basis: 323px;
-font-family: inherit;
-font-size: 40px;
-height: 86px;
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
 }
 
+.register {
+    font-size: 0.9em;
+    color: #fff;
+    text-align: left;
+    margin: 25px 0 10px;
+}
 
+.register p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
 
+.register p a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    background: #222;
+    width: 100%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 23px;
+    position: relative;
+}
+
+nav a {
+    color: #007aff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: #444;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
