@@ -1,2 +1,2 @@
 # Scoric-ui
-For school
+The html and css for scoric edu
