@@ -1,0 +1,2 @@
+# Scoric-ui
+For school
