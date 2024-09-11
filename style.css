@@ -40,9 +40,13 @@ img {
 
 h2 {
     justify-content: center;
-    font-size: 2em;
-    color: #000000;
+    font-size: 4em;
+    text-wrap: wrap;
+    color: #4c6b61;
     text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: 1em;
 }
 
 .inputbox {
@@ -113,12 +117,13 @@ button {
     width: 100%;
     height: 40px;
     border-radius: 40px;
-    background: #fff;
+    background: #4c6b61;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 1em;
     font-weight: 600;
+    color: white;
 }
 
 .register {
