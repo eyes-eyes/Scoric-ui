@@ -14,7 +14,7 @@ html {
 body {
     align-items: center;
     display: flex;
-    font-family: 'sansation', sans-serif;
+    font-family: "sansation", sans-serif;
     justify-content: center;
     height: 100%;
     background: #f1f1f1;
@@ -37,6 +37,7 @@ body {
     left: 10px;
     height: 45px;
     width: 45px;
+    cursor: pointer;
 }
 
 .signup-form h1 {
@@ -71,7 +72,7 @@ body {
 .signup-button {
     width: 100%;
     padding: 12px;
-    background-color: #4C6B61;
+    background-color: #4c6b61;
     color: #fff;
     border: none;
     border-radius: 8px;
