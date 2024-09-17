@@ -1,17 +1,99 @@
+body {
+    background: rgba(199, 215, 211, 0.8);
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
 .top_bar_thing {
-    left: 0px;
-    top: 0px;
     width: 100%;
-    height: 8%;
-    position: fixed;
+    height: 4rem;
+    position: relative;
     color: white;
     font-size: 2vmin;
     background-color: #1f2321;
     background-size: 100% 100%;
+    margin-bottom: 10rem;
 }
 
 .top_bar_thing * {
     font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
     margin: 0px;
-    padding: 0px;
+    padding: 1rem;
+}
+
+.add_student_area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.page_body {
+    width: 100%;
+}
+
+.add_button_area {
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.add_button {
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    background: #4c6b61;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: white;
+    font-size: 2rem;
+}
+
+.add_work {
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    background: #4c6b61;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.student_assignments {
+    display: flex;
+    flex-direction: column;
+}
+
+.student_groups p {
+    font-weight: 600;
+    font-size: 2rem;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: auto 0;
+    text-align: center;
+}
+
+.student_groups {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
