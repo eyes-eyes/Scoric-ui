@@ -42,14 +42,6 @@ html {
     width: 100%;
 }
 
-.add_button_area {
-    display: flex;
-    width: 100%;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-}
-
 .add_button {
     cursor: pointer;
     display: inline-block;
@@ -69,7 +61,7 @@ html {
     display: inline-block;
     width: fit-content;
     background: #4c6b61;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 5rem;
     border: none;
     outline: none;
@@ -83,17 +75,56 @@ html {
     flex-direction: column;
 }
 
-.student_groups p {
+/* .student_groups p {
+
+} */
+
+.student_groups {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.student_add {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.student_add p {
     font-weight: 600;
     font-size: 2rem;
     font-family: Poppins, Arial, Helvetica, sans-serif;
     padding: 0;
     margin: auto 0;
     text-align: center;
+    line-height: 1;
 }
 
-.student_groups {
-    width: 100%;
+.files_group {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
+}
+
+.file {
+    display: flex;
+    background: white;
+    width: fit-content;
+    max-width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+}
+
+.file p {
+    display: block;
+    font-size: 1.5rem;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0 1.5rem;
+    text-align: center;
+    line-height: 1;
 }
