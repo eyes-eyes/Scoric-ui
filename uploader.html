@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="uploader.css" />
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/ionicons/css/ionicons.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubric & Student Work Uploader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 60%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        .output {
+            margin-top: 30px;
+        }
+
+        .output h2 {
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .file-preview {
+            margin-top: 20px;
+        }
+
+        .alert {
+            color: green;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rubric & Student Work Uploader</h1>
+
+        <!-- Form for file upload -->
+        <form method="POST" enctype="multipart/form-data">
+            <h2>Upload Rubric</h2>
+            <input type="file" name="rubric_file" accept=".txt,.docx,.pdf,.csv"><br>
+
+            <h2>Upload Work</h2>
+            <input type="file" name="student_work_file" accept=".txt,.docx,.pdf,.png,.jpg,.jpeg"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert">
+                    {{ messages[0] }}
+                </div>
+            {% endif %}
+        {% endwith %} 
+    </div>
+</body>
+</html>
