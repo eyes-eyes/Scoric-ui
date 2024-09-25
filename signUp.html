@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            @import url("https://fonts.cdnfonts.com/css/sansation");
+        </style>
+        <link rel="stylesheet" href="signUpStyle.css" />
+        <title>Scoric Sign Up</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="home-button">
+                <img src="nobgarrow.png" alt="Home Button" onclick="goHome()" />
+            </div>
+            <section class="signup-form">
+                <h1>SIGN UP</h1>
+                <form>
+                    <input type="text" placeholder="Email" class="input-box" />
+                    <input type="password" placeholder="Password" class="input-box" />
+                    <div class="role-selection">
+                        <input type="radio" id="teacher" name="role" value="Teacher" />
+                        <label for="teacher">Teacher</label>
+                        <input type="radio" id="student" name="role" value="Student" />
+                        <label for="student">Student</label>
+                    </div>
+                    <button type="submit" class="signup-button">SIGN UP</button>
+                </form>
+            </section>
+        </div>
+
+        <script>
+            function goHome() {
+                window.location.href = "index.html";
+            }
+        </script>
+    </body>
+</html>

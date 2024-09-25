@@ -1,0 +1,130 @@
+body {
+    background: rgba(199, 215, 211, 0.8);
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+.top_bar_thing {
+    width: 100%;
+    height: 4rem;
+    position: relative;
+    color: white;
+    font-size: 2vmin;
+    background-color: #1f2321;
+    background-size: 100% 100%;
+    margin-bottom: 10rem;
+}
+
+.top_bar_thing * {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0px;
+    padding: 1rem;
+}
+
+.add_student_area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.page_body {
+    width: 100%;
+}
+
+.add_button {
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    background: #4c6b61;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: white;
+    font-size: 2rem;
+}
+
+.add_work {
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    background: #4c6b61;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5rem;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.student_assignments {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .student_groups p {
+
+} */
+
+.student_groups {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.student_add {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.student_add p {
+    font-weight: 600;
+    font-size: 2rem;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: auto 0;
+    text-align: center;
+    line-height: 1;
+}
+
+.files_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.file {
+    display: flex;
+    background: white;
+    width: fit-content;
+    max-width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+}
+
+.file p {
+    display: block;
+    font-size: 1.5rem;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0 1.5rem;
+    text-align: center;
+    line-height: 1;
+}
