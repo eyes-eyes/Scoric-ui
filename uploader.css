@@ -29,7 +29,7 @@ img {
     position: relative;
     width: 650px;
     height: 800px; /* Adapt to content height */
-    background: rgba(199, 215, 211, 0.8); /* Slightly transparent gray background */
+    background: rgba(128, 192, 176, 0.8); /* Slightly transparent gray background */
     backdrop-filter: blur(15px); /* Apply blur effect */
     display: flex;
     flex-direction: column;
@@ -39,17 +39,18 @@ img {
 }
 
 h2 {
-    justify-content: center;
-    font-size: 4em;
+    justify-content: left;
+    font-size: 2em;
     text-wrap: wrap;
     color: #4c6b61;
-    text-align: center;
+    text-align: right;
+    padding-top: 20px;
     padding-left: 50px;
-    padding-right: 50px;
+    padding-right: 30px;
     line-height: 1em;
 }
 
-.inputbox {
+button .inputbox {
     position: relative;
     margin: 15px 0; /* Adjusted margin for better spacing */
     width: 100%; /* Full width of the form box */
