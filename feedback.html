@@ -46,13 +46,69 @@
         }
 
         .feedback p {
-            width: 100%;
-            height: 200px; /* Set height for the feedback block */
+            width: 90%;
+            height: fit-content; /* Set height for the feedback block */
             border: 1px solid #ddd;
             border-radius: 10px;
             padding: 10px;
             margin-top: 10px;
             background-color: #f9f9f9; /* Light background for the feedback section */
+        }
+
+        /* Comments Section */
+        .comments {
+            margin-top: 20px;
+        }
+
+        .comments h3 {
+            margin-bottom: 10px;
+            color: #5f8a74;
+        }
+
+        .comment-box {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            position: relative;
+        }
+
+        .comment-box p {
+            margin: 0;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: gray;
+            text-align: right;
+            position: absolute;
+            right: 10px;
+            bottom: 5px;
+        }
+
+        /* Comment Form */
+        .comment-form textarea {
+            width: 100%;
+            height: 80px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+
+        .comment-form button {
+            background-color: #4c6b61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .comment-form button:hover {
+            background-color: #000000;
         }
     </style>
 </head>
@@ -74,14 +130,26 @@
 
         <div class="feedback">
             <h3>Feedback Section</h3>
-            <p>
-                This is where you can provide your feedback. You can fill in the details later. 
-                Feel free to write notes or comments regarding the rubric and assignment.
-            </p>
+            <p>This is where you can provide your feedback. You can fill in the details later. Feel free to write notes or comments regarding the rubric and assignment.</p>
+
+            <!-- Comment Section -->
+            <div class="comments">
+                <h3>Comments</h3>
+
+                <!-- Comment Form -->
+                <div class="comment-form">
+                    <textarea id="comment-input" placeholder="Add your comment here..."></textarea>
+                    <button onclick="addComment()">Submit Comment</button>
+                </div>
+
+                <!-- Display Comments -->
+                <div id="comment-section"></div>
+            </div>
         </div>
     </div>
 
     <script>
+        // Function to retrieve query parameters
         function getQueryParams() {
             const params = {};
             const queryString = window.location.search.substring(1);
@@ -121,6 +189,38 @@
                 assignmentEmbed.style.width = "100%";
                 assignmentEmbed.style.height = "400px"; // Set a height for the assignment file
                 document.getElementById('assignment-link').appendChild(assignmentEmbed);
+            }
+        }
+
+        // Add a new comment with a timestamp
+        function addComment() {
+            const commentInput = document.getElementById('comment-input');
+            const commentText = commentInput.value.trim();
+            
+            if (commentText !== "") {
+                const commentSection = document.getElementById('comment-section');
+
+                // Create a comment box
+                const commentBox = document.createElement('div');
+                commentBox.classList.add('comment-box');
+                
+                // Add comment text
+                const commentPara = document.createElement('p');
+                commentPara.textContent = commentText;
+                commentBox.appendChild(commentPara);
+
+                // Add timestamp
+                const timestamp = new Date().toLocaleString();
+                const timestampDiv = document.createElement('div');
+                timestampDiv.classList.add('timestamp');
+                timestampDiv.textContent = timestamp;
+                commentBox.appendChild(timestampDiv);
+
+                // Append the new comment to the comment section
+                commentSection.appendChild(commentBox);
+
+                // Clear the comment input
+                commentInput.value = "";
             }
         }
     </script>
