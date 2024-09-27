@@ -8,8 +8,8 @@
 
 html,
 body {
-    height: 100%; /* 
-    overflow: hidden; Prevent scrolling */
+    height: 100%;  
+    overflow: hidden; /*Prevent scrolling */
 }
 
 section {
@@ -20,29 +20,37 @@ section {
     width: 100%;
 }
 
-img {
-    width: 60vh;
+.logo {
+    width: 40vh;
     height: 40vh;
+}
+
+.info {
+    justify-content: center;
+    width: 100vh;
+    height: 100vh;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .form-box {
     position: relative;
-    width: 650px;
-    height: 900px; /* Adapt to content height */
+    width: 600px;
+    height: 600px; /* Adapt to content height */
     background: rgba(199, 215, 211, 0.8); /* Slightly transparent gray background */
     backdrop-filter: blur(15px); /* Apply blur effect */
-    display: flex;
+    display: flex; 
+    justify-content: flex-start;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 15px; /* Add padding to avoid content touching the edges */
+    padding: 10px; /*Add padding to avoid content touching the edges */
 }
 
 h2 {
     justify-content: center;
     font-size: 1em;
     text-wrap: wrap;
-    color: #4c6b61;
+    color: #000000;
     text-align: center;
     padding-left: 50px;
     padding-right: 50px;
@@ -51,16 +59,16 @@ h2 {
 
 .inputbox {
     position: relative;
-    margin: 15px 0; /* Adjusted margin for better spacing */
+    margin: 25px 0; /* Adjusted margin for better spacing */
     width: 100%; /* Full width of the form box */
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #021b14;
 }
 
 .inputbox label {
     position: absolute;
     top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
+    left: 5px; /*
+    transform: translateY(-50%); */
     color: #000000;
     font-size: 1em;
     pointer-events: none;
@@ -69,26 +77,26 @@ h2 {
 
 input:focus ~ label,
 input:valid ~ label {
-    top: -5px;
+    top: -2px;
 }
 
 .inputbox input {
     width: 100%;
-    height: 50px;
+    height: 55px;
     background: transparent;
     border: none;
     outline: none;
     font-size: 1em;
-    padding: 0 35px 0 5px;
-    color: #fff;
+    padding: 0 55px 0 5px;
+    color: #1e5c39;
 }
 
 .inputbox ion-icon {
     position: absolute;
     right: 8px;
-    color: #fff;
+    color: #0b561e;
     font-size: 1.2em;
-    top: 20px;
+    top: 15px;
 }
 
 .forget {

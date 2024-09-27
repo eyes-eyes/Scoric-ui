@@ -11,7 +11,6 @@ body {
     height: 100%;
     overflow: hidden; /* Prevent scrolling */
 }
-
 section {
     display: flex;
     justify-content: flex-end; /* Align items to the right */
@@ -29,7 +28,7 @@ img {
     position: relative;
     width: 650px;
     height: 800px; /* Adapt to content height */
-    background: rgba(128, 192, 176, 0.8); /* Slightly transparent gray background */
+    background: rgba(199, 215, 211, 0.8); /* Slightly transparent gray background */
     backdrop-filter: blur(15px); /* Apply blur effect */
     display: flex;
     flex-direction: column;
@@ -40,7 +39,21 @@ img {
 
 h2 {
     justify-content: left;
-    font-size: 2em;
+    justify-content: left;
+    font-size: 1em;
+    text-wrap: wrap;
+    color: #4c6b61;
+    text-align: center;
+    padding-top: 0px;
+    padding-left: 50px;
+    padding-right: 30px;
+    line-height: 1.2em;
+    padding-bottom: 30px;
+}
+
+h3 {
+    justify-content: right;
+    font-size: 1.75em;
     text-wrap: wrap;
     color: #4c6b61;
     text-align: right;
