@@ -37,11 +37,11 @@ section {
 .form-box {
     position: relative;
     width: 600px;
-    height: 600px; /* Adapt to content height */
+    height: 100%; /* Adapt to content height */
     background: rgba(199, 215, 211, 0.8); /* Slightly transparent gray background */
     backdrop-filter: blur(15px); /* Apply blur effect */
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     padding: 10px; /*Add padding to avoid content touching the edges */
